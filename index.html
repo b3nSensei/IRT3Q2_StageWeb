@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+  <!-- Google Analytics -->
+  <!-- End Google Analytics --> 
+<html lang="fr" id="rootElement">
+
+<head>
+	<title>Bivouac chez moi</title>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  	<meta property="og:title" content="Bivouac chez moi" />
+  	<meta property="og:description" content="Bivouac chez moi." />
+  	<meta property="og:keywords" content="camping, Belgique, voyage, découverte, exploration, bivouac, randonnée, randonneurs" />
+  	<meta property="og:type" content="website" />
+  	<meta property="og:site_name" content="Club alpin Belge">
+  	<meta property="og:url" content="https://clubalpin.be" />
+  	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+  			integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<!-- Force modal to open before user can acces site -->
+	<script>
+		$(document).ready(function(){
+ 			$('#rules').modal('show')
+		});
+	</script>
+	<!-- Style -->
+	<style>
+		html { -webkit-appearance: none; -webkit-border-radius: 0; }
+		img{ max-width: 100%; height: auto;	}
+		#myNav { background-color: #155C5F; }
+		#logoCAB { max-width: 100%; height: auto; padding-left: 10px; padding-right: 10px; }
+		#navTxt { margin-left: 10px; margin-right: 10px; }
+		#LogoBivouac { margin-right: auto;margin-left: auto; }
+		.menuItems { margin-right: auto;margin-left: auto; display: block; }
+		.pictos { max-width: 100%; height: auto; }
+		.smallP { font-size: 12px; }
+    </style>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-static-top scrolling navbar-expand-lg navbar-dark" id="myNav">
+    	<!-- Logo CAB et bivouac -->
+    	<div>
+    		<a href="https://www.clubalpin.be" >
+      			<img src="./images/logo_cab" alt="Logo Club Alpin Belge" height="290" width="290" id="logoCAB"/>
+      		</a>
+    	</div>
+        <a id="navTxt">
+			<img src="./images/logo_bivouac.png" alt="bivouac chez moi logo" height="150" width="150" id="LogoBivouac"/>
+		</a>
+    	<!-- Menu burger -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        	<span class="navbar-toggler-icon"></span>
+        </button>
+    	<!-- Navbar items -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        	<ul class="navbar-nav ml-auto">
+              	<li class="noSafari">
+                	<a class="nav-link" data-toggle="modal" href="#rules">
+						<img src="./images/menu/regles.png" alt="regles" height="135" width="135" class="menuItems"/>
+                  	</a>
+              	</li>
+                <li class="noSafari"> 
+                	<a class="nav-link" data-toggle="modal" href="#chercher">
+                		<img src="./images/menu/cherche.png" alt="chercher un bivouac" height="135" width="135" class="menuItems"/>
+                    </a>
+              	</li>
+              	<li class="noSafari"> 
+                	<a class="nav-link" data-toggle="modal" href="#offre">
+                		<img src="./images/menu/propose.png" alt="offrir un bivouac" height="135" width="135" class="menuItems"/>
+                 	</a>
+              	</li>
+              	<li class="noSafari"> 
+                	<a class="nav-link" data-toggle="modal" href="#temoignages">
+                		<img src="./images/menu/temoignages.png" alt="liens" height="135" width="135" class="menuItems"/>
+                	</a>
+              	</li>
+               	<li class="noSafari"> 
+                	<a class="nav-link" data-toggle="modal" href="#membre">
+                		<img src="./images/menu/membre.png" alt="devenir membre du CAB" height="135" width="135" class="menuItems"/>
+                    </a>
+              	</li>
+              	<li class="noSafari"> 
+                	<a class="nav-link" data-toggle="modal" href="#Liens">
+                		<img src="./images/menu/liens.png" alt="liens" height="100" width="100" class="menuItems"/>
+                	</a>
+              	</li>
+          	</ul>
+        </div>
+    </nav>
+
+	<!-- rules -->
+	<div class="modal fade" id="rules" tabindex="-1" role="dialog" aria-labelledby="regles" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+    		<div class="modal-content">
+      			<div class="modal-header">
+        			<h5 class="modal-title" id="regles">     
+          				<i class="fa fa-info-circle"></i>
+          				Règles et philosophie du Bivouac
+          			</h5>
+        			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          				<span aria-hidden="true">&times;</span>
+        			</button>
+      			</div>
+      			<div class="modal-body">
+      				<h3>Bienvenu(e) sur la plateforme de partage d'emplacements de bivouac du Club Alpin Belge.
+        			Assurez-vous de lire ces informations avant de vous lancer dans l'aventure.</h3>
+     					
+          			<h6>
+          				<i class="fa fa-exclamation-triangle"></i>
+          				Le respect des mesures Covid-19 sont d'application:
+          				<a href="https://www.info-coronavirus.be/en/" target="_blank">info-coronavirus.be</a>.
+          			</h6>
+          			<img src="./images/infos/regles.png" alt="Regles" class="pictos">
+					<hr>
+          			<h4>Le bivouac n’est PAS : </h4>
+	                	<ul>
+	                		<li>un camping gratuit !</li>
+	            			<li>une nuit festive !</li>
+	            			<li>un parking pour véhicule !</li>
+						</ul>
+					<hr>
+	          		<h4>Le randonneur qui bivouaque</h4>
+	      				<ul>
+	      					<li>arrive en fin de journée et repart tôt le matin,</li>
+							<li>est autonome (tout est « dans le sac »),</li>
+							<li>se déplace à pied, en vélo, en tout cas sans moteur (sauf les VAE),</li>
+							<li>est équipé max. d’une petite tente (où l’on ne peut pas se tenir debout) ou d’un tarp,</li>
+							<li>est discret (pas de son diffusé via GSM, radio, etc.),</li>
+							<li>fait place au silence dès 22 h,</li>
+							<li>respecte le sommeil des autres, </li>
+	    					<li>ne fait un feu que si /là/quand c’est autorisé et sécurisé,</li>
+							<li>ne prélève du bois mort que là où il est autorisé – sans porter atteinte à la végétation,</li>
+							<li>respecte les lieux, la nature et ses habitants (humains et non humains),</li>
+							<li>ne prélève rien et ne laisse aucune trace de son passage (pas non plus les traces d’un feu, ni du PQ, ni RIEN !),</li>
+							<li>reprend tous ses déchets avec lui,</li>
+						</ul>
+					<hr>
+					<b>Si vous utilisez "Bivouac chez moi", vous vous engagez à respecter toutes ces conditions et à adhérer à la philosophie du Bivouac</b><br><br>
+      				<div class="modal-footer">
+        				<button type="button" class="btn btn-primary" data-dismiss="modal">J'adhère</button>
+      				</div>
+    			</div>
+  			</div>
+  		</div>
+  	</div>
+
+	<!-- recherche -->
+	<div class="modal fade" id="chercher" tabindex="-1" role="dialog" aria-labelledby="cherche" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+	    	<div class="modal-content">
+	      		<div class="modal-header">
+	        		<h5 class="modal-title" id="cherche">     
+	          			<i class="fa fa-info-circle"></i>
+	          			Je cherche un bivouac
+	          		</h5>
+	        		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          			<span aria-hidden="true">&times;</span>
+	        		</button>
+	      		</div>
+	      		<div class="modal-body">
+	          		<h4>Bienvenue sur la plateforme de partage d’emplacements de bivouac du Club Alpin Belge.  </h4>
+	          		<img src="./images/infos/cherche.png" alt="Chercher un bivouac" class="pictos">
+	          		<hr>
+	          		<h4>La plateforme</h4>
+	          		La plateforme se base sur un réseau de membres qui mettent gratuitement à votre disposition un emplacement pour y bivouaquer une nuit. Il s'agit d'une initiative de partage et de rencontre, sans but lucratif. Cette plateforme est une initiative du Club Alpin Belge pour créer des contacts et des liens, prioritairement entre ses membres.
+	          		<br><br>
+	          		Le Club Alpin Belge décline toute responsabilité en cas de perte, dommage ou blessure survenu(e) lors de l'utilisation du site Web et/ou lors de votre séjour à des emplacements proposés. En contactant un hôte sur cette plateforme, vous reconnaissez avoir lu toutes
+	          		<a href="./index.html">les Règles du Bivouac </a> et vous vous engagez à les respecter scrupuleusement. 
+	          		<hr>
+	          		<h4>AVANT de bivouaquer</h4>      
+	          		Les bivouacs renseignés sont des propriétés privées non libres d’accès.
+					Contactez toujours l’accueillant pour obtenir son accord explicite à l’avance en précisant :  
+			      		<ul>
+							<li>la date,</li>
+	 						<li>le nombre de personnes,</li>
+	 						<li>l’heure prévue d’arrivée,</li>
+	 						<li>si vous êtes membre du Club Alpin Belge (n°de membre),</li>
+	 						<li>toute autre information utile éventuelle. </li>   
+						</ul>
+					Respectez les conditions et recommandations de l’accueillant. Prévenez dès que possible en cas de désistement. Le fait que d’autres randonneurs y soient installés ne signifie pas que l’accès vous est autorisé, entre autres parce que chaque lieu accueille un nombre de personnes maximum, parce qu’être membre du CAB peut-être une exigence ou pour toute autre raison qui appartient au propriétaire.
+					<br><br>Merci de respecter ses choix et décisions.
+					<hr>
+	          		<h4>La nuit en bivouac</h4>
+					<b>Durée maximale du séjour</b>
+					<br>Le bivouac se fait toujours, par principe, pour une nuit.<br><br> 
+					<b>Commodités </b> 
+					<br>L’accès à d’éventuelles commodités et installations peuvent varier d'un site à l'autre. Celles-ci sont généralement intégrées à la description du site. S’il n’y a pas d’accès possible, il est de la responsabilité du demandeur d’en tenir compte. <br>Par exemple, il n’est pas question de laisser du papier hygiénique trainer dans les alentours : reprenez TOUS vos déchets. Quelques bons ouvrages (« Comment chier dans les bois » entre autres) sont recommandés pour les randonneurs inexpériméntés. 
+					<br><br> 
+					<b>Respect de la nature</b> 
+					<br>Tous vos déchets doivent être enmenés. Le site doit être dans l’état où vous l’avez trouvé au moment de votre départ (ou plus propre). Le bruit est une pollution et le tapage nocturne commence, partout, à partir de 22 h ! 
+					<br><br> 
+					<b>Amusez-vous !</b> 
+					<br>C'est une excellente occasion de se rencontrer et de s'amuser ! Soyez curieux, partagez des histoires et faites de nouvelles amitiés!
+					<hr>
+					<h4>APRES le bivouac </h4>
+					<b>Partagez vos vécus !</b>
+					<br>Envoyez nous vos expériences, vos vécus, vos recommandations, vos gratitudes, vos moments simples et vos moments forts via l’adresse
+					<A HREF="mailto:bivouac@clubalpin.be">bivouac@clubalpin.be</A>.<br>
+					Autant que possible, nous les partagerons sur ce site et, régulièrement, dans la revue du Club Alpin Belge (Ardennes & Alpes).
+					<br><br>
+					<b>Contact</b>
+					<br>En cas de soucis n'hésitez pas à nous envoyer un mail  à <A HREF="mailto:bivouac@clubalpin.be">bivouac@clubalpin.be</A> pour nous signaler le problème.
+					<br><br>
+					<b>Partagez la plateforme </b>
+					<br>
+					Partagez cette plateforme : elle ne fonctionnera que grâce au partage. Si vous avez profité d’une rencontre, d’un lieu, pensez à rendre la pareille et incitez d’autres à proposer des emplacements.
+					<br><br>
+					<p class="smallP">Cet outil a été créé sur base du code source de https://welcometomygarden.be/ et adapté pour les membres du Club Alpin. Nous remercions sincèrement les auteurs de cette plateforme pour leur sens du partage.</p>
+	          		<hr>
+	      		</div>
+	      		<div class="modal-footer">
+	        		<button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+	      		</div>
+	    	</div>
+	  	</div>
+	</div>
+
+	<!-- offre -->
+	<div class="modal fade" id="offre" tabindex="-1" role="dialog" aria-labelledby="propose" aria-hidden="true">
+	  	<div class="modal-dialog" role="document">
+	    	<div class="modal-content">
+	      		<div class="modal-header">
+	        		<h5 class="modal-title" id="propose">
+	          			<i class="fa fa-info-circle"></i>
+	          			Je propose un Bivouac chez moi
+	        		</h5>
+	        		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          			<span aria-hidden="true">&times;</span>
+	        		</button>
+	      		</div>
+		      	<div class="modal-body">
+		        	<h4> Bienvenue sur la plateforme de partage d’emplacements de bivouac du Club Alpin Belge.
+		        	Un bout de jardin paratagé suffit à faire d’incroyables rencontres ! </h4>
+		        	<img src="./images/infos/propose.png" alt="Proposer un bivouac" class="pictos">
+		        	<hr>
+		            <p>
+		            	Vous disposez d’un bout de jardin (même en ville), d’une prairie, d’un coin de forêt, d’un lieu sympa qui permettrait à des randonneurs de passage, respecteux et autonomes, d’y passer une nuit ?
+						Indiquer un emplacement ne signifie nullement qu’il est libre d’accès ! 
+						<br><br>
+						Les randonneurs doivent toujours avoir votre autorisation préalable et explicite pour s’y rendre. Vous pouvez limiter les périodes, le nombre de personnes et définir toute modalité relative aux conditions de bivouac sur votre emplacement. Vous pouvez refuser si vous avez envie de solitude.
+						<br><br>
+						Vous pouvez aussi exiger qu’ils soient membres du Club Alpin Belge, ce qui permet un bon suivi des personnes généralement expérimentées.
+						<br><br>
+						<A class="btn btn-primary" HREF="./index.html">Consultez ici les règles auxquelles s’engagent les visiteurs.</A>
+						<br><br>
+						Enfin, vous avez le droit de rétractation à tout moment. Dans ce cas, veuillez nous envoyer un court e-mail à 
+						<A HREF="mailto:bivouac@clubalpin.be">bivouac@clubalpin.be</A> 
+						<br>(la mise à jour peut prendre quelques jours).
+						<br><br>
+						Inscrivez votre emplacement sans plus attendre: <br><br>
+						<a class="btn btn-primary" href="https://forms.gle/aT6K4bz2mf5qRede8" >Je propose un Bivouac</a>
+						<br><br>
+					</p>
+		      	</div>
+	      		<div class="modal-footer">
+	        		<button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+	      		</div>
+	      	</div>
+	  	</div>
+	</div>
+
+	<!-- Temoignagent -->
+	<div class="modal fade" id="temoignages" tabindex="-1" role="dialog" aria-labelledby="temoignent" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+	    	<div class="modal-content">
+	      		<div class="modal-header">
+	        		<h5 class="modal-title" id="temoignent">                  
+	          		<i class="fa fa-bullhorn"></i>
+	          		Ils temoignent </h5>
+	        		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          			<span aria-hidden="true">&times;</span>
+	        		</button>
+	      		</div>
+	      		<div class="modal-body">
+					<ul>
+						<li>« Inscrivez-vous, ce n’est que du bonheur de rencontrer des gens. » Henry</li>
+						<li>« "Bivouac chez moi" m'a permis d'accueillir une famille cet été et de passer une très belle soirée au coin du feu en leur compagnie ! Vivement les prochaines rencontres... » Marie</li>
+						<li>« Cycliste et voyageur depuis de années, participer à « Bivouac chez moi » était naturel. Plus local, donc j’adore. » Philippe</li>
+						<li>« Une magnifique hospitalité sur la Transardennaise à vélo grâce à « Bivouac chez moi. J adore! » Jehanne</li>
+	        		</ul>
+	      		</div>
+	      		<div class="modal-footer">
+	        		<button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+	      		</div>
+	    	</div>
+		</div>
+	</div>
+
+	<!-- About -->
+	<div class="modal fade" id="membre" tabindex="-1" role="dialog" aria-labelledby="membres" aria-hidden="true">
+	  	<div class="modal-dialog" role="document">
+	    	<div class="modal-content">
+	      		<div class="modal-header">
+	        		<h5 class="modal-title" id="membres">
+	          			<i class="fa fa-info-circle"></i>
+	          			Membre du Club Alpin Belge
+	        		</h5>
+	        		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          			<span aria-hidden="true">&times;</span>
+	       			</button>
+	      		</div>
+	      		<div class="modal-body">
+	        		<h4>
+	        			Il n’est pas indispensable d’être membre du Club Alpin belge pour participer à cette plateforme. Nous avons choisi de la rendre ouverte. 
+	        		</h4>
+	        		<img src="./images/infos/membres.png" alt="Membres du CAB" class="pictos">
+	        		<hr>
+	            	Nous vous recommandons chaudement d’être membre du CAB pour plusieurs raisons :
+	               	<div class="modal-body">
+		        		<ul>
+							<li >Cela peut représenter une sécurité pour les accueillants de savoir que vous vous êtes engagés dans ce projet commun, que vous êtes connu et identifiable. Ils peuvent d’ailleurs l’exiger s’ils le souhaitent et vous demander votre numéro de membre pour vous autoriser l’accès.   </li>
+							<li>Vous soutenez la fédération de votre sport qui regroupe déjà près de 5000 membres.</li>
+							<li>Vous soutenez le développement de cette plateforme et bien d’autres en faveur de la randonnée.</li>
+							<li>Vous bénéficiez d’une couverture d’assurance pendant la pratique de la randonnée et ce, quel que soit le contexte de ette pratique, à travers toute l’Europe géographique.</li>
+							<li>Vous recevez les newsletters et la revue trimestrielle Ardennes & Alpes. </li>
+							<li>Vous pouvez participer à des centaines de journées d’activités, de formations, des randos diverses organisées par plus d’une vingtaine de cercles et faire de formidables rencontres.</li>
+							<li>Vous disposez de réductions dans certains magasins de sports outdoor.</li>
+							<li>Vous bénéficiez de réductions dans les refuges des Club Alpins à travers le monde (affiliation « complète »).</li>
+							<li>Etc…</li>
+						</ul>
+					</div>
+					Pour être membre « rando », il vous en coutera, selon votre âge, entre 22 et 32 € pour 12 mois d’affiliation.
+					<br><br>
+					<a class="btn btn-primary" href="https://clubalpin.be/membre" target="_blank">Devenir membre du CAB</a>
+					<br>
+					<a class="btn-sm nodecoration" target="_blank" href="https://www.facebook.com/ClubAlpinBelge/">
+       					<i class="fa fa-facebook-f"></i>
+       				</a>
+       				<a class="btn-sm nodecoration" target="_blank" href="https://www.instagram.com/clubalpinbelge/">
+       					<i class="fa fa-instagram"></i>
+       				</a>
+	      		</div>
+	      		<div class="modal-footer">
+	        		<button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+	      		</div>
+	    	</div>
+		</div>
+	</div>
+
+	<!-- Liens -->
+	<div class="modal fade" id="Liens" tabindex="-1" role="dialog" aria-labelledby="liens" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+	    	<div class="modal-content">
+	      		<div class="modal-header">
+	        		<h5 class="modal-title" id="liens">                  
+	          		<i class="fa fa-bullhorn"></i>
+	          		Liens </h5>
+	        		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          			<span aria-hidden="true">&times;</span>
+	        		</button>
+	      		</div>
+	      		<div class="modal-body">
+	      			<ul>
+	      				<li><a href="https://clubalpin.be/" target="_blank">Club Alpin Belge, Fédération francophone de randonnée </a></li>
+						<li><a href="https://www.bivakzone.be/overzichtskaart.html" target="_blank">Aires de bivouacs autorisés en Belgique</a></li>
+						<li><a href="https://welcometomygarden.be/" target="_blank">Welcome to my garden en Belgique </a></li>
+						<li><a href="https://topomapviewer.ngi.be/" target="_blank">Cartes IGN Belgique en ligne </a></li>
+						<li><a href="http://grsentiers.org/" target="_blank">Les Sentiers de Grande Randonnée</a></li>
+						<li><a href="https://www.provelo.org/fr/page/cartes-interactives-itineraires-cyclistes" target="_blank">Itinéraires vélo </a></li>
+						<li><a href="https://clubalpin.be/developpement_durable" target="_blank">Pratique durable de la randonnée </a></li>
+						<li><a href="https://clubalpin.be/boite_a_tresors" target="_blank">Plus d'idées ...</a></li>
+	        		</ul>
+	        		<hr>
+	        		<h6>D'autres idées à partager?</h6>
+	        		<i> N'hésitez pas à envoyer un mail à <A HREF="mailto:bivouac@clubalpin.be">bivouac@clubalpin.be</A></i>
+	      		</div>
+	      		<div class="modal-footer">
+	        		<button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+	      		</div>
+	    	</div>
+		</div>
+	</div>
+
+	<!-- iframe: carte intéractive -->
+	<iframe 
+		style="position: fixed; width:100%; height:100%; border:none; margin:0; padding-bottom:56px; z-index: -1;"
+		allowfullscreen src="https://umap.openstreetmap.fr/fr/map/bivouac-cab_476856">
+	</iframe>
+
+	<!-- Scripts -->
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
